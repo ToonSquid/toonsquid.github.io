@@ -79,6 +79,7 @@ https://toonsquid.com/handbook/export/image_sequence/
 https://toonsquid.com/handbook/export/project/
 https://toonsquid.com/handbook/settings/overview/
 https://toonsquid.com/handbook/settings/general/
+https://toonsquid.com/handbook/settings/tools/
 https://toonsquid.com/handbook/settings/appearance/
 https://toonsquid.com/handbook/settings/gestures/
 https://toonsquid.com/handbook/settings/backup/
