@@ -32,6 +32,12 @@
 <li>MOV (H.264 and H.265 with transparency)</li>
 </ul>
 <p>The video is copied and saved as part of the project.</p>
+<blockquote>
+<h4 id="note-video-resource-usage" class="heading-with-anchor">Note <!-- anchor: note-video-resource-usage --><a href="#note-video-resource-usage" class="heading-with-anchor-anchor">#</a></h4><p>It is important to keep in mind that videos use significant amounts of limited system resources such as hardware video decoders and RAM. It is therefore recommended that you don&#39;t use more than 5 videos simultaneously on any frame of the animation, especially on older iPads with only small amounts of available RAM.</p>
+<p>ToonSquid does not have full control over the shared system process that performs the hardware-accelerated video decoding. In rare situations, this process has been observed to run out of memory and crash, which can lead to a crash of ToonSquid or to failed exports. If you encounter this scenario in one of your projects, you can open the iPad&#39;s Settings app, go to </p>
+<p><code>ToonSquid &gt; Resources &gt; Video Decoding Memory Usage</code></p>
+<p>and change the value from the default of <code>Medium</code> to <code>Low</code>.<br/>This causes ToonSquid to more aggressively limit the amount of simultaneous video decoding requests it makes at the cost of video playback performance in the editor.</p>
+</blockquote>
 `;
   </script>
   <link rel="icon" type="image/x-icon" href="./../../../assets/images/favicon.png">

@@ -603,6 +603,12 @@
 <li>MOV (H.264 and H.265 with transparency)</li>
 </ul>
 <p>The video is copied and saved as part of the project.</p>
+<blockquote>
+<h4 id="layers_video_note-video-resource-usage" class="heading-with-anchor">Note <!-- anchor: note-video-resource-usage --><a href="#note-video-resource-usage" class="heading-with-anchor-anchor">#</a></h4><p>It is important to keep in mind that videos use significant amounts of limited system resources such as hardware video decoders and RAM. It is therefore recommended that you don&#39;t use more than 5 videos simultaneously on any frame of the animation, especially on older iPads with only small amounts of available RAM.</p>
+<p>ToonSquid does not have full control over the shared system process that performs the hardware-accelerated video decoding. In rare situations, this process has been observed to run out of memory and crash, which can lead to a crash of ToonSquid or to failed exports. If you encounter this scenario in one of your projects, you can open the iPad&#39;s Settings app, go to </p>
+<p><code>ToonSquid &gt; Resources &gt; Video Decoding Memory Usage</code></p>
+<p>and change the value from the default of <code>Medium</code> to <code>Low</code>.<br/>This causes ToonSquid to more aggressively limit the amount of simultaneous video decoding requests it makes at the cost of video playback performance in the editor.</p>
+</blockquote>
 <h4 id="layers_onion_skin" class="heading-with-anchor pdf-page-separator"><!-- anchor: _pdf_chapter_dummy_anchor_ --><a href="#_pdf_chapter_dummy_anchor_" class="heading-with-anchor-anchor">#</a></h4><h4><a href="#layers_overview">Layers</a></h4><!--- tags: onion skin, lightbox, previous, next, preview, in-between -->
 
 <h1>Onion Skinning</h1><p>Use the onion skinning feature to see the drawings or frames before and after the current frame. This helps with drawing in-betweens in a traditional animation workflow.</p>
@@ -1175,6 +1181,12 @@
 </ol>
 <h2 id="text_fonts_project" class="heading-with-anchor">Fonts and the Project <!-- anchor: project --><a href="#project" class="heading-with-anchor-anchor">#</a></h2><p>The font files themselves are not stored as part of a project and are not included when a project is exported. This means that they don&#39;t increase the size of a project and can be used in every project after being imported once.</p>
 <p>This also means that importing a project that uses custom fonts on a different iPad will use fallback fonts instead until the fonts used by the project are installed on the iPad.</p>
+<h2 id="text_fonts_file-formats" class="heading-with-anchor">Supported File Formats <!-- anchor: file-formats --><a href="#file-formats" class="heading-with-anchor-anchor">#</a></h2><p>ToonSquid supports font files with the following formats to be imported:</p>
+<ul>
+<li>TTC</li>
+<li>TTF</li>
+<li>OTF</li>
+</ul>
 <h4 id="path_overview" class="heading-with-anchor pdf-page-separator"><!-- anchor: _pdf_chapter_dummy_anchor_ --><a href="#_pdf_chapter_dummy_anchor_" class="heading-with-anchor-anchor">#</a></h4><h4><a href="#path_overview">Path</a></h4><!--- tags: path, vector, shape, bezier, control points, gradients -->
 
 <h1>Overview</h1><p>Add fully-customizable shapes to your animation. They are vector-based, so they will remain sharp at every scale.</p>
@@ -1655,10 +1667,6 @@
 <h1>Gestures</h1><p>This tab contains settings regarding touch gestures in the ToonSquid editor.</p>
 <p><img src="/assets/images/hb/settings/gestures.jpg" alt="Gesture settings"></p>
 <h2 id="settings_gestures_general" class="heading-with-anchor">General <!-- anchor: general --><a href="#general" class="heading-with-anchor-anchor">#</a></h2><h3 id="settings_gestures_finger-drawing" class="heading-with-anchor">Finger drawing <!-- anchor: finger-drawing --><a href="#finger-drawing" class="heading-with-anchor-anchor">#</a></h3><p>When this option is disabled, only Apple Pencil can be used in the brush, eraser, smudge and selection tools. Touches with a finger will not result in brush strokes but can still be used for performing other gestures such as zooming or undo and redo.</p>
-<!-- feature: DISABLE_ROTATION -->
-<h3 id="settings_gestures_rotate-pinch" class="heading-with-anchor">Rotate the canvas with two fingers <!-- anchor: rotate-pinch --><a href="#rotate-pinch" class="heading-with-anchor-anchor">#</a></h3><p>Whether pinching to zoom with two fingers should also allow you to rotate the canvas.</p>
-<!-- end-feature: DISABLE_ROTATION -->
-
 <h2 id="settings_gestures_history" class="heading-with-anchor">History <!-- anchor: history --><a href="#history" class="heading-with-anchor-anchor">#</a></h2><h3>Two finger tap to undo</h3><p>Whether tapping the screen with two fingers should undo the previous edit.</p>
 <h3>Three finger tap to redo</h3><p>Whether tapping the screen with three fingers should re-apply the previously undone edit.</p>
 <h2 id="settings_gestures_pipette" class="heading-with-anchor">Pipette <!-- anchor: pipette --><a href="#pipette" class="heading-with-anchor-anchor">#</a></h2><p>Whether long pressing with a finger or Apple Pencil should temporarily switch to the <a href="#colors_pipette">pipette tool</a>. By default, only long presses with a finger cause the pipette to appear.</p>
