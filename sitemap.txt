@@ -41,6 +41,7 @@ https://toonsquid.com/handbook/brushes/brush_editor/
 https://toonsquid.com/handbook/brushes/brush_settings/
 https://toonsquid.com/handbook/brushes/brush_textures/
 https://toonsquid.com/handbook/brushes/brush_import/
+https://toonsquid.com/handbook/brushes/auto_shape/
 https://toonsquid.com/handbook/transform/overview/
 https://toonsquid.com/handbook/transform/transform_properties/
 https://toonsquid.com/handbook/transform/transform_tool/
