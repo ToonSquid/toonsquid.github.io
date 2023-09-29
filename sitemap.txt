@@ -15,6 +15,7 @@ https://toonsquid.com/handbook/projects/overview/
 https://toonsquid.com/handbook/projects/create_project/
 https://toonsquid.com/handbook/projects/manage/
 https://toonsquid.com/handbook/projects/scenes/
+https://toonsquid.com/handbook/projects/crop/
 https://toonsquid.com/handbook/projects/backup/
 https://toonsquid.com/handbook/layers/overview/
 https://toonsquid.com/handbook/layers/animation/
