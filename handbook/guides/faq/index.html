@@ -30,8 +30,10 @@
 <li><a href="#import-file-types">What are all of the file types that can be imported into ToonSquid? </a></li>
 <li><a href="#layer-limit">Does ToonSquid have a layer limit? </a></li>
 <li><a href="#length-limit">Do ToonSquid animations have a length limit? </a></li>
+<li><a href="#resolution-limit">What is the resolution limit of ToonSquid projects? </a></li>
 <li><a href="#languages">Will ToonSquid be available in other languages? </a></li>
 <li><a href="#no-select-from-markers">Why can I not see the “Select from Markers” option? </a></li>
+<li><a href="#export-failed-video">I&#39;m trying to export a project with video layers but the export failed </a></li>
 <li><a href="#next-update-when">When will the next ToonSquid update come out and what features will it have? </a></li>
 <li><a href="#discussions">Are there forums to discuss ToonSquid? </a></li>
 <li><a href="#other-questions">I have more questions about ToonSquid </a></li>
@@ -86,6 +88,7 @@
 <h2 id="length-limit" class="heading-with-anchor">Do ToonSquid animations have a length limit? <!-- anchor: length-limit --><a href="#length-limit" class="heading-with-anchor-anchor">#</a></h2><p>No, there is no fixed limit to how long your ToonSquid animations can be.</p>
 <p>As long as your iPad has enough free storage space to be able to save all of your drawings and enough space for when you want to export the animation into a single video file, you can keep adding more frames to your animation.</p>
 <p>Note that this also does not depend on how much RAM your iPad has. The RAM amount only limits how many layers can be visible on the canvas at the same time. That being said, you might experience reduced performance during playback if not all drawings can fit into RAM at the same time.</p>
+<h2 id="resolution-limit" class="heading-with-anchor">What is the resolution limit of ToonSquid projects? <!-- anchor: resolution-limit --><a href="#resolution-limit" class="heading-with-anchor-anchor">#</a></h2><p>You can create ToonSquid projects with resolutions up to 4096x4096 pixels.<br/>This is also the export resolution limit.</p>
 <h2 id="languages" class="heading-with-anchor">Will ToonSquid be available in other languages? <!-- anchor: languages --><a href="#languages" class="heading-with-anchor-anchor">#</a></h2><p>At the moment, ToonSquid and this handbook can only be offered in English, but localizations for other languages might be added in the future.</p>
 <p>Please reach out via the <a href="mailto:contact@toonsquid.com">contact e-mail address</a> and mention which language you would like to see ToonSquid translated into so that the most common requests can be prioritized. Thank you!</p>
 <h2 id="no-select-from-markers" class="heading-with-anchor">Why can I not see the “Select from Markers” option? <!-- anchor: no-select-from-markers --><a href="#no-select-from-markers" class="heading-with-anchor-anchor">#</a></h2><p>Make sure that you have added the frame markers inside of the animation clip that is referenced by your symbol layer and not in the main timeline.</p>
@@ -94,6 +97,20 @@
 <ul>
 <li>Selecting it in the library and choosing the <code>Edit</code> option at the bottom, or</li>
 <li>Using the <a href="/handbook/layers/layer_list/#actions">layer actions</a> of the symbol layer and choosing <code>Edit Clip</code>.</li>
+</ul>
+<h2 id="export-failed-video" class="heading-with-anchor">I&#39;m trying to export a project with video layers but the export failed <!-- anchor: export-failed-video --><a href="#export-failed-video" class="heading-with-anchor-anchor">#</a></h2><p>Please try the following steps:</p>
+<ol>
+<li>In the iPad Settings app, go to <code>ToonSquid &gt; Resources &gt; Video Decoding Memory Usage</code></li>
+<li>Change that setting from <code>Medium</code> to <code>Low</code>.</li>
+<li>Retry the export.</li>
+</ol>
+<p>If the export still fails, please reach out via the <a href="mailto:contact@toonsquid.com">contact e-mail address</a> and include the following information:</p>
+<ul>
+<li>The iPad model that you are using</li>
+<li>The iPadOS version that you are using</li>
+<li>The <a href="/handbook/interface/editor#help">ToonSquid version</a> that you are using</li>
+<li>The Log.txt file, which you can find in the Files app under <code>On my iPad &gt; ToonSquid &gt; Logs</code></li>
+<li>If possible, a copy of the project file that you are trying to export</li>
 </ul>
 <h2 id="next-update-when" class="heading-with-anchor">When will the next ToonSquid update come out and what features will it have? <!-- anchor: next-update-when --><a href="#next-update-when" class="heading-with-anchor-anchor">#</a></h2><p>As mentioned above, ToonSquid is entirely made by one person and I am working on it in my spare time in addition to a full-time job and other projects, so I can neither give a time estimate for when the next update will be ready, nor whether and when any specific feature will be added.</p>
 <p>Many unpredictable factors can delay the next feature release, such as high-priority bugs popping up that need to be fixed as quickly as possible or large amounts of general support requests via e-mail.</p>

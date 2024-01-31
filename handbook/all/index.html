@@ -264,6 +264,7 @@
 <p>It is also used as the default export resolution and the size of the area that will be exported by default. However, both of these aspects can be adjusted later on, either in the <a href="#export_overview">export settings</a> or by using a <a href="#layers_camera">camera layer</a>.</p>
 <p>All scenes in a project have the same resolution as the project, but it is also always possible to create <a href="#symbols_animation_clips">animation clips</a> with different resolutions than the project they are in.</p>
 <p>You can change the resolution of the project or the current clip after it has been created with the <a href="#projects_crop">crop tool</a>.</p>
+<p>The maximum project resolution is 4096x4096 pixels.</p>
 <h2 id="projects_create_project_fps" class="heading-with-anchor">FPS <!-- anchor: fps --><a href="#fps" class="heading-with-anchor-anchor">#</a></h2><p>The fps (frames per second) or frame rate of a project determines how many frames of your animation are played back during each second of playback. A high frame rate causes a smoother playback, whereas a low frame rate can make your animation feel choppy.</p>
 <p>The frame rate is not used to speed up or slow down animations. For that purpose, you should adjust the timing of your drawings and keyframes in the timeline.</p>
 <p>ToonSquid supports frame rates between 1 and 60 fps.</p>
@@ -580,7 +581,7 @@
 <p>The resolution property is also used as the default resolution for the export, but this can be changed with the <a href="#export_overview">export settings</a>.</p>
 <h3 id="layers_camera_outside-darkening" class="heading-with-anchor">Outside Darkening <!-- anchor: outside-darkening --><a href="#outside-darkening" class="heading-with-anchor-anchor">#</a></h3><p>The outside region of the camera can be darkened to help focus your attention on the parts of the animation that will be visible in the final export.</p>
 <h4 id="layers_camera_outside-darkening-amount" class="heading-with-anchor">Amount <!-- anchor: outside-darkening-amount --><a href="#outside-darkening-amount" class="heading-with-anchor-anchor">#</a></h4><p>By how much the outside regions of the camera should be darkened.</p>
-<h4 id="layers_camera_outside-darkening-always" class="heading-with-anchor">Always enabled <!-- anchor: outside-darkening-always --><a href="#outside-darkening-always" class="heading-with-anchor-anchor">#</a></h4><p>Whether the outside of the camera should always be darkened during both editing and playback. By default, it is only darkened during playback.</p>
+<h4 id="layers_camera_outside-darkening-always" class="heading-with-anchor">Always Enabled <!-- anchor: outside-darkening-always --><a href="#outside-darkening-always" class="heading-with-anchor-anchor">#</a></h4><p>Whether the outside of the camera should always be darkened during both editing and playback. By default, it is only darkened during playback.</p>
 <h3 id="layers_camera_visibility" class="heading-with-anchor">Visibility <!-- anchor: visibility --><a href="#visibility" class="heading-with-anchor-anchor">#</a></h3><p>The visibility of the camera layer only affects its visualization in the editor. Therefore, hiding a camera layer does not change the export behavior.</p>
 <p>Delete the camera layer instead if you don&#39;t want it to be used during the export.</p>
 <h4 id="layers_audio" class="heading-with-anchor pdf-page-separator"><!-- anchor: _pdf_chapter_dummy_anchor_ --><a href="#_pdf_chapter_dummy_anchor_" class="heading-with-anchor-anchor">#</a></h4><h4><a href="#layers_overview">Layers</a></h4><!-- tags: audio, music, lip-syncing, volume -->
@@ -1376,11 +1377,11 @@
 <h4 id="symbols_symbol_layer_loop-mode-dont-loop" class="heading-with-anchor">Don&#39;t loop <!-- anchor: loop-mode-dont-loop --><a href="#loop-mode-dont-loop" class="heading-with-anchor-anchor">#</a></h4><p>No looping takes place. Once the animation clip runs out of content, the symbol layer will appear empty.</p>
 <h4 id="symbols_symbol_layer_loop-mode-normal" class="heading-with-anchor">Normal <!-- anchor: loop-mode-normal --><a href="#loop-mode-normal" class="heading-with-anchor-anchor">#</a></h4><p>The referenced animation clip will play again from the beginning once it reaches its last frame. This is the default loop mode.</p>
 <h4 id="symbols_symbol_layer_boomerang" class="heading-with-anchor">Boomerang <!-- anchor: boomerang --><a href="#boomerang" class="heading-with-anchor-anchor">#</a></h4><p>The clip is first played forwards until its last frame is reached. It is then played in reverse until the first frame and then the loop starts again.</p>
-<h3 id="symbols_symbol_layer_use-own-fps" class="heading-with-anchor">Use own frame rate <!-- anchor: use-own-fps --><a href="#use-own-fps" class="heading-with-anchor-anchor">#</a></h3><p>This setting is only relevant if the clip that the symbol layer is in and the referenced symbol animation clip have different frame rates.</p>
+<h3 id="symbols_symbol_layer_use-own-fps" class="heading-with-anchor">Use own Frame Rate <!-- anchor: use-own-fps --><a href="#use-own-fps" class="heading-with-anchor-anchor">#</a></h3><p>This setting is only relevant if the clip that the symbol layer is in and the referenced symbol animation clip have different frame rates.</p>
 <p>It defines whether the symbol should play back at the frame rate of its own referenced clip or the timeline that it&#39;s currently in.</p>
 <p>Note that audio is automatically muted if it&#39;s coming through a symbol that is not playing back at its own frame rate.</p>
-<h4>Example: Importing a 60fps video into a 30fps timeline via a symbol</h4><p>If <code>Use own frame rate</code> is enabled, the video plays back in real-time (every second frame is skipped to maintain its natural speed).</p>
-<p>If <code>Use own frame rate</code> is disabled, the video plays back at half-speed (no frames are skipped - one frame in the timeline equals one frame in the symbol clip (i.e. video)).</p>
+<h4>Example: Importing a 60fps video into a 30fps timeline via a symbol</h4><p>If <code>Use own Frame Rate</code> is enabled, the video plays back in real-time (every second frame is skipped to maintain its natural speed).</p>
+<p>If <code>Use own Frame Rate</code> is disabled, the video plays back at half-speed (no frames are skipped - one frame in the timeline equals one frame in the symbol clip (i.e. video)).</p>
 <h3 id="symbols_symbol_layer_time" class="heading-with-anchor">Time <!-- anchor: time --><a href="#time" class="heading-with-anchor-anchor">#</a></h3><p>The frame of the referenced clip at which the playback in the symbol should begin. This works similarly to the <code>Offset</code> property of an <a href="#layers_audio_offset">audio clip</a>.</p>
 <p>If the referenced clip uses frame markers, you can also tap on <code>Select from Markers</code> in order to quickly pick the time from the list of markers. Learn more about that workflow <a href="#symbols_marker_animation">here</a>.</p>
 <h3 id="symbols_symbol_layer_muted" class="heading-with-anchor">Muted <!-- anchor: muted --><a href="#muted" class="heading-with-anchor-anchor">#</a></h3><p>Whether audio layers should play through this symbol.</p>
@@ -1878,8 +1879,10 @@
 <li><a href="#_import-file-types">What are all of the file types that can be imported into ToonSquid? </a></li>
 <li><a href="#_layer-limit">Does ToonSquid have a layer limit? </a></li>
 <li><a href="#_length-limit">Do ToonSquid animations have a length limit? </a></li>
+<li><a href="#_resolution-limit">What is the resolution limit of ToonSquid projects? </a></li>
 <li><a href="#_languages">Will ToonSquid be available in other languages? </a></li>
 <li><a href="#_no-select-from-markers">Why can I not see the “Select from Markers” option? </a></li>
+<li><a href="#_export-failed-video">I&#39;m trying to export a project with video layers but the export failed </a></li>
 <li><a href="#_next-update-when">When will the next ToonSquid update come out and what features will it have? </a></li>
 <li><a href="#_discussions">Are there forums to discuss ToonSquid? </a></li>
 <li><a href="#_other-questions">I have more questions about ToonSquid </a></li>
@@ -1934,6 +1937,7 @@
 <h2 id="guides_faq_length-limit" class="heading-with-anchor">Do ToonSquid animations have a length limit? <!-- anchor: length-limit --><a href="#length-limit" class="heading-with-anchor-anchor">#</a></h2><p>No, there is no fixed limit to how long your ToonSquid animations can be.</p>
 <p>As long as your iPad has enough free storage space to be able to save all of your drawings and enough space for when you want to export the animation into a single video file, you can keep adding more frames to your animation.</p>
 <p>Note that this also does not depend on how much RAM your iPad has. The RAM amount only limits how many layers can be visible on the canvas at the same time. That being said, you might experience reduced performance during playback if not all drawings can fit into RAM at the same time.</p>
+<h2 id="guides_faq_resolution-limit" class="heading-with-anchor">What is the resolution limit of ToonSquid projects? <!-- anchor: resolution-limit --><a href="#resolution-limit" class="heading-with-anchor-anchor">#</a></h2><p>You can create ToonSquid projects with resolutions up to 4096x4096 pixels.<br/>This is also the export resolution limit.</p>
 <h2 id="guides_faq_languages" class="heading-with-anchor">Will ToonSquid be available in other languages? <!-- anchor: languages --><a href="#languages" class="heading-with-anchor-anchor">#</a></h2><p>At the moment, ToonSquid and this handbook can only be offered in English, but localizations for other languages might be added in the future.</p>
 <p>Please reach out via the <a href="#mailto:contact@toonsquid.com">contact e-mail address</a> and mention which language you would like to see ToonSquid translated into so that the most common requests can be prioritized. Thank you!</p>
 <h2 id="guides_faq_no-select-from-markers" class="heading-with-anchor">Why can I not see the “Select from Markers” option? <!-- anchor: no-select-from-markers --><a href="#no-select-from-markers" class="heading-with-anchor-anchor">#</a></h2><p>Make sure that you have added the frame markers inside of the animation clip that is referenced by your symbol layer and not in the main timeline.</p>
@@ -1942,6 +1946,20 @@
 <ul>
 <li>Selecting it in the library and choosing the <code>Edit</code> option at the bottom, or</li>
 <li>Using the <a href="#layers_layer_list__actions">layer actions</a> of the symbol layer and choosing <code>Edit Clip</code>.</li>
+</ul>
+<h2 id="guides_faq_export-failed-video" class="heading-with-anchor">I&#39;m trying to export a project with video layers but the export failed <!-- anchor: export-failed-video --><a href="#export-failed-video" class="heading-with-anchor-anchor">#</a></h2><p>Please try the following steps:</p>
+<ol>
+<li>In the iPad Settings app, go to <code>ToonSquid &gt; Resources &gt; Video Decoding Memory Usage</code></li>
+<li>Change that setting from <code>Medium</code> to <code>Low</code>.</li>
+<li>Retry the export.</li>
+</ol>
+<p>If the export still fails, please reach out via the <a href="#mailto:contact@toonsquid.com">contact e-mail address</a> and include the following information:</p>
+<ul>
+<li>The iPad model that you are using</li>
+<li>The iPadOS version that you are using</li>
+<li>The <a href="#interface_editor_help">ToonSquid version</a> that you are using</li>
+<li>The Log.txt file, which you can find in the Files app under <code>On my iPad &gt; ToonSquid &gt; Logs</code></li>
+<li>If possible, a copy of the project file that you are trying to export</li>
 </ul>
 <h2 id="guides_faq_next-update-when" class="heading-with-anchor">When will the next ToonSquid update come out and what features will it have? <!-- anchor: next-update-when --><a href="#next-update-when" class="heading-with-anchor-anchor">#</a></h2><p>As mentioned above, ToonSquid is entirely made by one person and I am working on it in my spare time in addition to a full-time job and other projects, so I can neither give a time estimate for when the next update will be ready, nor whether and when any specific feature will be added.</p>
 <p>Many unpredictable factors can delay the next feature release, such as high-priority bugs popping up that need to be fixed as quickly as possible or large amounts of general support requests via e-mail.</p>
